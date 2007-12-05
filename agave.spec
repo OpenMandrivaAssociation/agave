@@ -20,7 +20,7 @@ BuildRequires:  boost-devel
 
 URL:            http://home.gna.org/colorscheme/
 
-Group:          Applications/Multimedia 
+Group:          Graphics
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
 License:        GPL 
 
