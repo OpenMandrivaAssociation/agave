@@ -8,7 +8,16 @@ Summary:        A GNOME tool to choose colors
 Version:        %{version} 
 Release:        %{release} 
 Source0:        http://download.gna.org/colorscheme/releases/%{name}-%{version}.tar.bz2 
-#Patch0:         gif2png-2.0.1-bugfix.patch.bz2 
+
+BuildRequires:  pkgconfig
+BuildRequires:  gnome-doc-utils
+BuildRequires:  perl(XML::Parser)
+BuildRequires:  gtkmm2.4-devel
+BuildRequires:  libglademm2.4-devel
+BuildRequires:  gnomeui2-devel
+BuildRequires:  gconfmm2.6-devel
+BuildRequires:  boost-devel
+
 URL:            http://home.gna.org/colorscheme/
 
 Group:          Applications/Multimedia 
