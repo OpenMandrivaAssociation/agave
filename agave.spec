@@ -1,7 +1,7 @@
 
 %define name    agave
-%define version 0.4.3 
-%define release %mkrel 2
+%define version 0.4.5
+%define release %mkrel 1
 
 Name:           %{name} 
 Summary:        A GNOME tool to choose colors
@@ -38,10 +38,6 @@ A GNOME tool to choose colors
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=%buildroot
 
-
-%__mkdir -p %{_iconsdir}
-%__cp %buildroot%{_iconsdir}/hicolor/48x48/apps/agave-icon.png %buildroot%{_iconsdir}/
-
 %find_lang %name
 
 %clean 
@@ -66,9 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome/help/agave/C/*.xml
 %dir %{_datadir}/gnome/help/agave/C/figures
 %{_datadir}/gnome/help/agave/C/figures/*.png
-%{_iconsdir}/*.png
-%{_iconsdir}/hicolor/48x48/apps/agave-icon.png
-%{_iconsdir}/hicolor/scalable/apps/agave-icon.svg
+%{_iconsdir}/hicolor/*/apps/agave.png
+%{_iconsdir}/hicolor/scalable/apps/agave.svg
 %dir %{_datadir}/omf/agave
 %{_datadir}/omf/agave/agave-C.omf
 
