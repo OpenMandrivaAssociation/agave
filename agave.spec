@@ -18,6 +18,7 @@ BuildRequires:  libglademm2.4-devel
 BuildRequires:  gnomeui2-devel
 BuildRequires:  gconfmm2.6-devel
 BuildRequires:  boost-devel
+BuildRequires:	intltool
 
 URL:            http://home.gna.org/colorscheme/
 
