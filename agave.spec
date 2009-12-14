@@ -1,7 +1,7 @@
 
 %define name    agave
 %define version 0.4.7
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:           %{name} 
 Summary:        A GNOME tool to choose colors
