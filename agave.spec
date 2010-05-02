@@ -1,7 +1,7 @@
 
 %define name    agave
 %define version 0.4.7
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:           %{name} 
 Summary:        A GNOME tool to choose colors
@@ -10,7 +10,6 @@ Release:        %{release}
 Source0:        http://download.gna.org/colorscheme/releases/%{name}-%{version}.tar.bz2 
 Patch0:		agave-0.4.7-mdv-fix-str-fmt.patch
 
-BuildRequires:  pkgconfig
 BuildRequires:  gnome-doc-utils
 BuildRequires:  perl(XML::Parser)
 BuildRequires:  gtkmm2.4-devel
@@ -34,14 +33,14 @@ A GNOME tool to choose colors
 %patch0 -p1 -b .strfmt
 
 %build 
-%configure 
+%configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
+%makeinstall_std
 
-%find_lang %name
+%find_lang %name --with-gnome
 
 %clean 
 rm -rf %{buildroot}
@@ -60,18 +59,7 @@ rm -rf %{buildroot}
 %{_datadir}/agave/ui/agave.glade
 %{_datadir}/agave/ui/*.ui
 %{_datadir}/applications/agave.desktop
-%dir %{_datadir}/gnome/help/agave
-%dir %{_datadir}/gnome/help/agave/C
-%dir %{_datadir}/gnome/help/agave/cs
-%dir %{_datadir}/gnome/help/agave/de
-%{_datadir}/gnome/help/agave/*/*.xml
-%dir %{_datadir}/gnome/help/agave/C/figures
-%dir %{_datadir}/gnome/help/agave/cs/figures
-%dir %{_datadir}/gnome/help/agave/de/figures
-%{_datadir}/gnome/help/agave/*/figures/*.png
 %{_iconsdir}/hicolor/*/apps/agave.png
 %{_iconsdir}/hicolor/scalable/apps/agave.svg
 %dir %{_datadir}/omf/agave
 %{_datadir}/omf/agave/agave*.omf
-
-
