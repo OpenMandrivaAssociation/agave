@@ -9,7 +9,7 @@ Version:        %{version}
 Release:        %{release} 
 Source0:        http://download.gna.org/colorscheme/releases/%{name}-%{version}.tar.bz2 
 Patch0:		agave-0.4.7-mdv-fix-str-fmt.patch
-
+Patch1:		agave-0.4.7-fix-build.patch
 BuildRequires:  gnome-doc-utils
 BuildRequires:  perl(XML::Parser)
 BuildRequires:  gtkmm2.4-devel
@@ -31,6 +31,7 @@ A GNOME tool to choose colors
 %prep
 %setup -q 
 %patch0 -p1 -b .strfmt
+%patch1 -p0
 
 %build 
 %configure2_5x
