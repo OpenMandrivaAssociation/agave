@@ -1,7 +1,7 @@
 Name:		agave
 Summary:	A GNOME tool to choose colors
 Version:	0.4.7
-Release:	6
+Release:	7
 Group:		Graphics
 License:	GPL
 URL:		http://home.gna.org/colorscheme/
