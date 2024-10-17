@@ -4,7 +4,7 @@ Version:	0.4.7
 Release:	7
 Group:		Graphics
 License:	GPL
-URL:		http://home.gna.org/colorscheme/
+URL:		https://home.gna.org/colorscheme/
 Source0:	http://download.gna.org/colorscheme/releases/%{name}-%{version}.tar.bz2
 Patch0:		agave-0.4.7-mdv-fix-str-fmt.patch
 Patch1:		agave-0.4.7-fix-build.patch
