@@ -8,6 +8,11 @@ URL:		https://home.gna.org/colorscheme/
 Source0:	http://download.gna.org/colorscheme/releases/%{name}-%{version}.tar.bz2
 Patch0:		agave-0.4.7-mdv-fix-str-fmt.patch
 Patch1:		agave-0.4.7-fix-build.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	docbook-dtd45-xml
 BuildRequires:	intltool
 BuildRequires:	perl(XML::Parser)
